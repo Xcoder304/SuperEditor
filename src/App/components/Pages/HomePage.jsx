@@ -32,6 +32,10 @@ const MainContent = (props)=>{
         SetCurrentTxt(RemoveSpace.join(" "))
     }
 
+    function ClearAll(){
+        SetCurrentTxt('')
+    }
+
 
     const [CurrentTxt,SetCurrentTxt] = React.useState('')
 
@@ -54,6 +58,8 @@ const MainContent = (props)=>{
             <Button disabled={CurrentTxt.length==0} variant="contained" size="medium" onClick={CopyTheTxt}>Copy</Button>
 
             <Button disabled={CurrentTxt.length==0} variant="contained" size="medium" onClick={RemoveExtraSpaceFun}>Remove Extra Spaces</Button>
+
+            <Button disabled={CurrentTxt.length==0} variant="contained" size="medium" onClick={ClearAll}>Clear All</Button>
 
 
             </div>
