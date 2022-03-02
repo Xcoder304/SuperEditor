@@ -24,6 +24,7 @@ const MainContent = (props)=>{
         let CopyTxt = document.getElementById('textarea')
         CopyTxt.select()
         document.execCommand('copy')
+        document.getSelection().removeAllRanges()
     }
 
     function RemoveExtraSpaceFun(){
@@ -44,15 +45,15 @@ const MainContent = (props)=>{
 
             <div className='ButtonWapper' style={{marginTop:"10px", gap:"12px"}}>
 
-            <Button variant="contained" size="medium" onClick={ToUpperCaseFun}>To UpperCase</Button>
+            <Button disabled={CurrentTxt.length==0} variant="contained" size="medium" onClick={ToUpperCaseFun}>To UpperCase</Button>
 
-            <Button variant="contained" size="medium" onClick={ToLowerCaseFun}>To LowerCase</Button>
+            <Button disabled={CurrentTxt.length==0} variant="contained" size="medium" onClick={ToLowerCaseFun}>To LowerCase</Button>
 
-            <Button variant="contained" size="medium" onClick={ToCapitalizeFun}>To capitalize</Button>
+            <Button disabled={CurrentTxt.length==0} variant="contained" size="medium" onClick={ToCapitalizeFun}>To capitalize</Button>
 
-            <Button variant="contained" size="medium" onClick={CopyTheTxt}>Copy</Button>
+            <Button disabled={CurrentTxt.length==0} variant="contained" size="medium" onClick={CopyTheTxt}>Copy</Button>
 
-            <Button variant="contained" size="medium" onClick={RemoveExtraSpaceFun}>Remove Extra Spaces</Button>
+            <Button disabled={CurrentTxt.length==0} variant="contained" size="medium" onClick={RemoveExtraSpaceFun}>Remove Extra Spaces</Button>
 
 
             </div>
