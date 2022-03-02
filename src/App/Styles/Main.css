@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+:root {
+  --bgColor: #fff;
+  --LightBgColor: #fff;
+  --txtColor: #323232;
+  --LtxtColor: rgba(50, 50, 50, 0.5);
+}
+.DarkMode {
+  --bgColor: #353535;
+  --LightBgColor: #656565;
+  --txtColor: #fff;
+  --LtxtColor: rgba(255, 255, 255, 0.5);
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  background: var(--bgColor);
+}
+.MainContentSec {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 13px;
+  background: var(--bgColor);
+}
+.MainContentSec h1 {
+  text-align: left;
+  font-size: 27px;
+  color: var(--txtColor);
+}
+.txtEditorWapper {
+  width: 80%;
+  height: 360px;
+}
+.txtEditorWapper textarea {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 13px 3%;
+  color: var(--txtColor);
+  background: var(--LightBgColor);
+}
+.ButtonWapper {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.Countwapper {
+  width: 80%;
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 18px;
+}
+.Countwapper h1 {
+  text-transform: capitalize;
+  font-size: 19px;
+  color: var(--txtColor);
+  font-weight: 600;
+}
+.Countwapper h1 span {
+  color: blue;
+  font-size: 23px;
+  font-weight: 800;
+}
+.perviewSec {
+  margin-top: 15px;
+  width: 80%;
+}
+.perviewSec h1 {
+  text-align: left;
+  font-size: 27px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--txtColor);
+}
+.perviewSec p {
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--LtxtColor);
+}
