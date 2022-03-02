@@ -58,7 +58,7 @@ const MainContent = (props)=>{
             </div>
 
             <div className='Countwapper'>
-                <h1>total Word: <span>{CurrentTxt.split(" ").length}</span></h1>
+                <h1>total Word: <span>{CurrentTxt.split(" ").filter((elm)=> elm.length!=0).length}</span></h1>
                 <h1>total characters: <span>{CurrentTxt.length}</span></h1>
                 <h1>take time to read in: <span>{0.008 * CurrentTxt.split(" ").length} mins</span></h1>
             </div>
